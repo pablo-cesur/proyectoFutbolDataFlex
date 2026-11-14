@@ -1,0 +1,15 @@
+# Archivos compilados y temporales de DataFlex
+programs/*.exe
+programs/*.dbg
+programs/*.exe.manifest
+programs/webapp.log
+appsrc/*.dep
+appsrc/*.fld
+appsrc/*.pbg
+appsrc/*.pdp
+appsrc/*.pkd
+appsrc/*.prp
+appsrc/*.err
+data/*.cch
+ddsrc/*.bak
+idesrc/
