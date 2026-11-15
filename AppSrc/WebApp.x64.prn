@@ -1,5 +1,5 @@
 Compiling Program: C:\DataFlex Projects\FutbolWebApp\AppSrc\WebApp.src
-Memory Available: 73804926976
+Memory Available: 72809062400
 1>Use AllWebAppClasses.pkg
 Using pre-compiled package ALLWEBAPPCLASSES.PKG
 Including file: AllWebAppClasses.x64.pkd    (C:\Program Files\DataFlex 25.0\Pkg\AllWebAppClasses.x64.pkd)
@@ -127,7 +127,7 @@ Including file: LoginEncryptionKey.inc    (C:\DataFlex Projects\FutbolWebApp\App
 36367>End_Object
 36368>
 36368>Object oWebApp is a cWebApp
-36370>    Set psTheme to "Df_Material"
+36370>    Set psTheme to "Df_Tema_Rojo"
 36371>    Set peAlignView to alignCenter
 36372>    
 36372>    // It is important to set this so that all views will default
@@ -3472,7 +3472,7 @@ Including file: SelectPosicion.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\S
 39038>Send StartWebApp of oWebApp
 39039>
 Summary
-Memory Available: 73810661376
+Memory Available: 72795832320
 Total Warnings : 0
 Total Errors   : 0
 Total Symbols  : 25600
@@ -3480,6 +3480,6 @@ Total Resources: 0
 Total Commands : 39038
 Total Windows  : 0
 Total Pages    : 0
-Static Data    : 483625
+Static Data    : 483629
 Message area   : 261934
 Total Blocks   : 17306
