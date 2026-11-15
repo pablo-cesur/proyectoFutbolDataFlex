@@ -41,6 +41,11 @@
 				<DDClass>
 					<className>cjugadorposicionDataDictionary</className>
 					<classFile>cjugadorposicionDataDictionary.dd</classFile>
+					<preferred>false</preferred>
+				</DDClass>
+				<DDClass>
+					<className>cjugadorposicionDataDictionary2</className>
+					<classFile>cjugadorposicionDataDictionary2.dd</classFile>
 					<preferred>true</preferred>
 				</DDClass>
 			</DDClasses>

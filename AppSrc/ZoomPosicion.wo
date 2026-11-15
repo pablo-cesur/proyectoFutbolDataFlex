@@ -7,12 +7,14 @@ Use cWebPanel.pkg
 Use cWebMenuGroup.pkg
 Use cWebMenuItem.pkg
 Use cWebForm.pkg
+Use cWebList.pkg
+Use cWebColumn.pkg
 
-Use cligaDataDictionary.dd
-Use cequipoDataDictionary.dd
-Use cjugadorDataDictionary.dd
 Use cposicionDataDictionary.dd
 Use cjugadorposicionDataDictionary.dd
+Use cjugadorDataDictionary.dd
+Use cequipoDataDictionary.dd
+Use cligaDataDictionary.dd
 
 Object oZoomPosicion is a cWebView
     Set piColumnCount to 12
@@ -23,56 +25,35 @@ Object oZoomPosicion is a cWebView
     Set Verify_Save_Msg to 0
     Set piMaxWidth to 1024
 
-    Object oliga_DD is a cligaDataDictionary
-    End_Object 
+    // 1. Declaración de los DDOs en la jerarquía correcta
+   Object oliga_DD is a cligaDataDictionary
+    End_Object
 
     Object oequipo_DD is a cequipoDataDictionary
-        Set DDO_Server To oliga_DD
-    End_Object 
+        Set DDO_Server to oliga_DD
+    End_Object
 
     Object ojugador_DD is a cjugadorDataDictionary
-        Set DDO_Server To oequipo_DD
-    End_Object 
+        Set DDO_Server to oequipo_DD
+    End_Object
 
     Object oposicion_DD is a cposicionDataDictionary
     End_Object 
 
+    // La tabla puente cuelga de posicion y conecta con jugador
     Object ojugadorposicion_DD is a cjugadorposicionDataDictionary
-        Set DDO_Server To ojugador_DD
-        Set DDO_Server To oposicion_DD
-    End_Object 
+        Set DDO_Server to oposicion_DD
+        // IMPORTANTE: Aseguramos que el puente sirva también los datos del jugador
+        Set DDO_Server to ojugador_DD
+    End_Object
 
-    Set Main_DD To ojugadorposicion_DD
-    Set Server  To ojugadorposicion_DD
+    Set Main_DD to oposicion_DD
+    Set Server  to oposicion_DD
 
 
     Object oWebMainPanel is a cWebPanel
         Set piColumnCount to 12
         WebSetResponsive piColumnCount rmMobile to 4
-
-        Object ojugadorNombre is a cWebForm
-            Entry_Item jugador.Nombre
-            Set piColumnSpan to 12
-            Set piColumnIndex to 0
-            Set peLabelPosition to lpTop
-            Set psLabel to "Nombre"
-        End_Object 
-
-        Object ojugadorApellido is a cWebForm
-            Entry_Item jugador.Apellido
-            Set piColumnSpan to 12
-            Set piColumnIndex to 0
-            Set peLabelPosition to lpTop
-            Set psLabel to "Apellido"
-            Set pbPromptButton to True
-
-// ToDo: Fill in the from-child parent Select view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oSelectView
-
-            Procedure OnPrompt
-                Send NavigatePath
-            End_Procedure
-        End_Object 
 
         Object oposicionNombre is a cWebForm
             Entry_Item posicion.Nombre
@@ -80,15 +61,29 @@ Object oZoomPosicion is a cWebView
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
             Set psLabel to "Nombre"
-            Set pbPromptButton to True
-
-// ToDo: Fill in the from-child parent Select view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oSelectView
-
-            Procedure OnPrompt
-                Send NavigatePath
-            End_Procedure
         End_Object 
+        
+        // Rejilla para mostrar los jugadores de esta posición (Apunta a la tabla puente)
+        Object oJugadoresList is a cWebList
+            Set Server to ojugadorposicion_DD
+            Set piColumnSpan to 12
+            Set pbServerOnRowClick to True
+            Set pbFillHeight to True
+
+            // Columna para el Nombre del Jugador
+            Object oJugadorNombre is a cWebColumn
+                Entry_Item jugador.Nombre
+                Set psCaption to "Nombre"
+                Set piWidth to 200
+            End_Object 
+
+            // Columna para el Apellido del Jugador
+            Object oJugadorApellido is a cWebColumn
+                Entry_Item jugador.Apellido
+                Set psCaption to "Apellido"
+                Set piWidth to 200
+            End_Object
+        End_Object
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup
@@ -192,4 +187,4 @@ Object oZoomPosicion is a cWebView
 
     End_Procedure
 
-End_Object 
+End_Object

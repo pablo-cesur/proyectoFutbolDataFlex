@@ -1,0 +1,10 @@
+﻿Use cjugadorposicionDataDictionary.dd
+
+Class cjugadorposicionDataDictionary2 is a cjugadorposicionDataDictionary
+    
+    Procedure Construct_Object
+        Forward Send Construct_Object
+
+    End_Procedure
+
+End_Class

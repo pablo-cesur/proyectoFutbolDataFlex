@@ -1,0 +1,49 @@
+﻿// SelectJugadoresPorPosicion.wo
+// Lista de los jugadores que juegan en la posición elegida en SelectPosicion.
+// Tabla principal: JugadorPosicion (hija). Posiciones y Jugadores son sus padres.
+// Al navegar desde SelectPosicion, el framework restringe la lista a la
+// posición elegida (navegación nfFromParent).
+
+Use cWebView.pkg
+Use cWebList.pkg
+Use cWebColumn.pkg
+
+// AJUSTAR: copia estos Use y los nombres de clase de tu SelectPosicion.wo
+Use cjugadorDataDictionary.dd
+Use cposicionDataDictionary.dd
+Use cjugadorposicionDataDictionary.dd
+
+Object oSelectJugadoresPorPosicion is a cWebView
+    Set psCaption to "Jugadores"
+    Set peWebViewStyle to wvsDrillDown
+
+    // Estructura de DDOs
+    Object oJugadores_DD is a cjugadorDataDictionary
+    End_Object
+
+    Object oPosiciones_DD is a cposicionDataDictionary
+    End_Object
+
+    Object oJugadorPosicion_DD is a cjugadorposicionDataDictionary
+        Set DDO_Server to oJugadores_DD
+        Set DDO_Server to oPosiciones_DD
+    End_Object
+
+    Set Main_DD to oJugadorPosicion_DD
+    Set Server to oJugadorPosicion_DD
+
+    Object oList is a cWebList
+        Set pbFillHeight to True
+        Set piColumnSpan to 0
+        Set psCSSClass to "MobileList"
+
+        // AJUSTAR: campo de la tabla Jugadores que quieras mostrar
+        Object ojugadorNombre is a cWebColumn
+            Entry_Item jugador.Nombre
+            Set psCaption to "Jugador"
+            Set piWidth to 200
+        End_Object
+
+        // Más columnas: copia el bloque anterior con otro campo de Jugadores
+    End_Object
+End_Object
