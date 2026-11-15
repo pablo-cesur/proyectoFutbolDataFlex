@@ -1,5 +1,5 @@
 Compiling Program: C:\DataFlex Projects\FutbolWebApp\AppSrc\WebApp.src
-Memory Available: 69603315712
+Memory Available: 70390882304
 1>Use AllWebAppClasses.pkg
 Using pre-compiled package ALLWEBAPPCLASSES.PKG
 Including file: AllWebAppClasses.x64.pkd    (C:\Program Files\DataFlex 25.0\Pkg\AllWebAppClasses.x64.pkd)
@@ -1997,7 +1997,7 @@ Including file: centrenadorDataDictionary.dd    (C:\DataFlex Projects\FutbolWebA
 37791>>>>>>>            Set piColumnSpan to 12
 37792>>>>>>>            Set piColumnIndex to 0
 37793>>>>>>>            Set peLabelPosition to lpTop
-37794>>>>>>>            Set psLabel to "Nombre"
+37794>>>>>>>            Set psLabel to "Equipo"
 37795>>>>>>>            Set pbPromptButton to True
 37796>>>>>>>
 37796>>>>>>>// ToDo: Fill in the from-child parent Select view object name for navigate forward
@@ -3505,7 +3505,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39084>Send StartWebApp of oWebApp
 39085>
 Summary
-Memory Available: 69598035968
+Memory Available: 70380044288
 Total Warnings : 0
 Total Errors   : 0
 Total Symbols  : 25618
