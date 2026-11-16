@@ -44,11 +44,11 @@ Object oZoomEquipo is a cWebView
         End_Object 
 
         Object oligaID is a cWebForm
-            Entry_Item liga.ID
+            Entry_Item liga.Nombre
             Set piColumnSpan to 3
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
-            Set psLabel to "LigaID"
+            Set psLabel to "Liga"
             Set pbPromptButton to True
 
 // ToDo: Fill in the from-child parent Select view object name for navigate forward
