@@ -1,5 +1,5 @@
 Compiling Program: C:\DataFlex Projects\FutbolWebApp\AppSrc\WebApp.src
-Memory Available: 78005403648
+Memory Available: 75492839424
 1>Use AllWebAppClasses.pkg
 Using pre-compiled package ALLWEBAPPCLASSES.PKG
 Including file: AllWebAppClasses.x64.pkd    (C:\Program Files\DataFlex 25.0\Pkg\AllWebAppClasses.x64.pkd)
@@ -3502,7 +3502,6 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39091>    Use SelectEquipo.wo
 39091>    Use SelectJugador.wo
 39091>    Use SelectLiga.wo
-39091>    Use ZoomPosicion.wo
 39091>    Use SelectPosicion.wo
 39091> 
 39091>    Set phoDefaultView to oDashboard
@@ -3512,7 +3511,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39093>Send StartWebApp of oWebApp
 39094>
 Summary
-Memory Available: 77989335040
+Memory Available: 75476312064
 Total Warnings : 0
 Total Errors   : 0
 Total Symbols  : 25621
