@@ -1,5 +1,5 @@
 Compiling Program: C:\DataFlex Projects\FutbolWebApp\AppSrc\WebApp.src
-Memory Available: 75492839424
+Memory Available: 77324832768
 1>Use AllWebAppClasses.pkg
 Using pre-compiled package ALLWEBAPPCLASSES.PKG
 Including file: AllWebAppClasses.x64.pkd    (C:\Program Files\DataFlex 25.0\Pkg\AllWebAppClasses.x64.pkd)
@@ -3413,7 +3413,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 38993>>>                Set piColumnIndex to 0
 38994>>>                Set psCSSClass to "Tile LightAlternate"
 38995>>>                Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Entrenadores</div><div class="Tile_Subtitle"></div></div>'
-38996>>>                WebRegisterPath ntNavigateForwardCustom oSelectEntrenador
+38996>>>                WebRegisterPath ntNavigateForward oSelectEntrenador
 39002>>>                                
 39002>>>                // WebRegisterPath ntNavigateForwardCustom oYourViewName
 39002>>>                
@@ -3429,7 +3429,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39012>>>                Set psCSSClass to "Tile Dark"
 39013>>>                Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Jugadores</div><div class="Tile_Subtitle"></div></div>'
 39014>>>                Set piColumnIndex to 6
-39015>>>                WebRegisterPath ntNavigateForwardCustom oSelectJugador
+39015>>>                WebRegisterPath ntNavigateForward oSelectJugador
 39021>>>    
 39021>>>                // WebRegisterPath ntNavigateForwardCustom oYourViewName
 39021>>>                
@@ -3445,7 +3445,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39031>>>                Set piColumnIndex to 0
 39032>>>                Set psCSSClass to "Tile DarkAlternate"
 39033>>>                Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Ligas</div><div class="Tile_Subtitle"></div></div>'
-39034>>>                WebRegisterPath ntNavigateForwardCustom oSelectLiga
+39034>>>                WebRegisterPath ntNavigateForward oSelectLiga
 39040>>>                // WebRegisterPath ntNavigateForwardCustom oYourViewName
 39040>>>                
 39040>>>                Procedure OnClick String sId String sParam
@@ -3460,7 +3460,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39050>>>                Set piColumnIndex to 6
 39051>>>                Set psCSSClass to "Tile LightAlternate"
 39052>>>                Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Equipos</div><div class="Tile_Subtitle"></div></div>'
-39053>>>                WebRegisterPath ntNavigateForwardCustom oSelectEquipo                
+39053>>>                WebRegisterPath ntNavigateForward oSelectEquipo                
 39059>>>                // WebRegisterPath ntNavigateForwardCustom oYourViewName
 39059>>>                
 39059>>>                Procedure OnClick String sId String sParam
@@ -3475,7 +3475,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39069>>>                Set piColumnIndex to 3
 39070>>>                Set psCSSClass to "Tile LightAlternate"
 39071>>>                Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Posiciones</div><div class="Tile_Subtitle"></div></div>'
-39072>>>                WebRegisterPath ntNavigateForwardCustom oSelectPosicion               
+39072>>>                WebRegisterPath ntNavigateForward oSelectPosicion               
 39078>>>                // WebRegisterPath ntNavigateForwardCustom oYourViewName
 39078>>>                
 39078>>>                Procedure OnClick String sId String sParam
@@ -3511,7 +3511,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39093>Send StartWebApp of oWebApp
 39094>
 Summary
-Memory Available: 75476312064
+Memory Available: 77320896512
 Total Warnings : 0
 Total Errors   : 0
 Total Symbols  : 25621
