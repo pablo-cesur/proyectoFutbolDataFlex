@@ -87,7 +87,7 @@ Object oZoomJugador is a cWebView
              Set piColumnSpan to 4
              Set piColumnIndex to 0
 
-             WebRegisterPath ntNavigateForward oSelectPosicion
+             WebRegisterPath ntNavigateForward oSelectJugadorPosicion
 
                 Procedure OnClick
                      Send NavigatePath
@@ -153,6 +153,8 @@ Object oZoomJugador is a cWebView
         WebSet pbRender of oSaveBtn to False
         WebSet pbRender of oCancelChangesBtn to False
         WebSet pbRender of oDeleteBtn to False
+        //Añadimos para que aparezca solo si hay un jugador cargado
+        WebSet pbRender of oBtnVerPosiciones to bHasRecord
 
         If (NavigateData.bReadOnly) Begin
             WebSet pbRender of oEditBtn to True
