@@ -1,5 +1,5 @@
 Compiling Program: C:\DataFlex Projects\FutbolWebApp\AppSrc\WebApp.src
-Memory Available: 77293600768
+Memory Available: 73004785664
 1>Use AllWebAppClasses.pkg
 Using pre-compiled package ALLWEBAPPCLASSES.PKG
 Including file: AllWebAppClasses.x64.pkd    (C:\Program Files\DataFlex 25.0\Pkg\AllWebAppClasses.x64.pkd)
@@ -1635,19 +1635,18 @@ Including file: jugadorposicion.fd    (C:\DataFlex Projects\FutbolWebApp\DDSrc\j
 37490>>>>>>>            End_Procedure
 37491>>>>>>>        End_Object
 37492>>>>>>>        
-37492>>>>>>>        Use cWebButton.pkg
-37492>>>>>>>
-37492>>>>>>>Object oBtnVerPosiciones is a cWebButton
-37494>>>>>>>    Set psCaption to "Ver posiciones"
-37495>>>>>>>    Set piColumnSpan to 4
-37496>>>>>>>    Set piColumnIndex to 0
+37492>>>>>>>        //Creamos el botón
+37492>>>>>>>        Object oBtnVerPosiciones is a cWebButton
+37494>>>>>>>             Set psCaption to "Ver posiciones"
+37495>>>>>>>             Set piColumnSpan to 4
+37496>>>>>>>             Set piColumnIndex to 0
 37497>>>>>>>
-37497>>>>>>>    WebRegisterPath ntNavigateForward oSelectPosicion
+37497>>>>>>>             WebRegisterPath ntNavigateForward oSelectPosicion
 37503>>>>>>>
-37503>>>>>>>    Procedure OnClick
-37506>>>>>>>        Send NavigatePath
-37507>>>>>>>    End_Procedure
-37508>>>>>>>End_Object
+37503>>>>>>>                Procedure OnClick
+37506>>>>>>>                     Send NavigatePath
+37507>>>>>>>                End_Procedure
+37508>>>>>>>        End_Object
 37509>>>>>>>    End_Object 
 37510>>>>>>>
 37510>>>>>>>    Object oActionGroup is a cWebMenuGroup
@@ -2396,7 +2395,7 @@ Including file: ZoomLiga.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomLig
 38141>>>>>>>       End_Object
 38142>>>>>>>        
 38142>>>>>>>               //Creamos el botón para ver equipos
-38142>>>>>>>            Object oBtnVerEquipos is a cWebButton
+38142>>>>>>>         Object oBtnVerEquipos is a cWebButton
 38144>>>>>>>                Set psCaption to "Ver equipos de esta liga"
 38145>>>>>>>                Set piColumnSpan to 4
 38146>>>>>>>                WebRegisterPath ntNavigateForward oSelectEquipo
@@ -2406,7 +2405,7 @@ Including file: ZoomLiga.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomLig
 38155>>>>>>>                      Send NavigatePath
 38156>>>>>>>                End_Procedure
 38157>>>>>>>                
-38157>>>>>>>            End_Object
+38157>>>>>>>         End_Object
 38158>>>>>>>    End_Object 
 38159>>>>>>>
 38159>>>>>>>    Object oActionGroup is a cWebMenuGroup
@@ -3464,7 +3463,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39044>>>                Set piColumnIndex to 0
 39045>>>                Set psCSSClass to "Tile LightAlternate"
 39046>>>                Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Entrenadores</div><div class="Tile_Subtitle"></div></div>'
-39047>>>                WebRegisterPath ntNavigateForward oSelectEntrenador
+39047>>>                WebRegisterPath ntNavigateForwardCustom oSelectEntrenador
 39053>>>                                
 39053>>>                // WebRegisterPath ntNavigateForwardCustom oYourViewName
 39053>>>                
@@ -3480,7 +3479,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39063>>>                Set psCSSClass to "Tile Dark"
 39064>>>                Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Jugadores</div><div class="Tile_Subtitle"></div></div>'
 39065>>>                Set piColumnIndex to 6
-39066>>>                WebRegisterPath ntNavigateForward oSelectJugador
+39066>>>                WebRegisterPath ntNavigateForwardCustom oSelectJugador
 39072>>>    
 39072>>>                // WebRegisterPath ntNavigateForwardCustom oYourViewName
 39072>>>                
@@ -3496,7 +3495,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39082>>>                Set piColumnIndex to 0
 39083>>>                Set psCSSClass to "Tile DarkAlternate"
 39084>>>                Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Ligas</div><div class="Tile_Subtitle"></div></div>'
-39085>>>                WebRegisterPath ntNavigateForward oSelectLiga
+39085>>>                WebRegisterPath ntNavigateForwardCustom oSelectLiga
 39091>>>                // WebRegisterPath ntNavigateForwardCustom oYourViewName
 39091>>>                
 39091>>>                Procedure OnClick String sId String sParam
@@ -3511,7 +3510,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39101>>>                Set piColumnIndex to 6
 39102>>>                Set psCSSClass to "Tile LightAlternate"
 39103>>>                Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Equipos</div><div class="Tile_Subtitle"></div></div>'
-39104>>>                WebRegisterPath ntNavigateForward oSelectEquipo                
+39104>>>                WebRegisterPath ntNavigateForwardCustom oSelectEquipo                
 39110>>>                // WebRegisterPath ntNavigateForwardCustom oYourViewName
 39110>>>                
 39110>>>                Procedure OnClick String sId String sParam
@@ -3526,7 +3525,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39120>>>                Set piColumnIndex to 3
 39121>>>                Set psCSSClass to "Tile LightAlternate"
 39122>>>                Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Posiciones</div><div class="Tile_Subtitle"></div></div>'
-39123>>>                WebRegisterPath ntNavigateForward oSelectPosicion               
+39123>>>                WebRegisterPath ntNavigateForwardCustom oSelectPosicion               
 39129>>>                // WebRegisterPath ntNavigateForwardCustom oYourViewName
 39129>>>                
 39129>>>                Procedure OnClick String sId String sParam
@@ -3562,7 +3561,7 @@ Including file: ZoomEquipo.wo    (C:\DataFlex Projects\FutbolWebApp\AppSrc\ZoomE
 39144>Send StartWebApp of oWebApp
 39145>
 Summary
-Memory Available: 77284405248
+Memory Available: 73004773376
 Total Warnings : 0
 Total Errors   : 0
 Total Symbols  : 25634
