@@ -7,8 +7,10 @@ Use cWebPanel.pkg
 Use cWebMenuGroup.pkg
 Use cWebMenuItem.pkg
 Use cWebForm.pkg
+Use cWebButton.pkg
 
 Use cligaDataDictionary.dd
+Use cEquipoDataDictionary.dd
 
 Object oZoomLiga is a cWebView
     Set piColumnCount to 12
@@ -52,7 +54,22 @@ Object oZoomLiga is a cWebView
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
             Set psLabel to "Equipos"
-        End_Object 
+            Set peAlign to alignLeft
+           
+        End_Object
+        
+               //Creamos el botón para ver equipos
+            Object oBtnVerEquipos is a cWebButton
+                Set psCaption to "Ver equipos de esta liga"
+                Set piColumnSpan to 4
+                WebRegisterPath ntNavigateForward oSelectEquipo
+                
+                Procedure OnClick
+       
+                      Send NavigatePath
+                End_Procedure
+                
+            End_Object
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup
@@ -113,6 +130,7 @@ Object oZoomLiga is a cWebView
         WebSet pbRender of oSaveBtn to False
         WebSet pbRender of oCancelChangesBtn to False
         WebSet pbRender of oDeleteBtn to False
+        WebSet pbRender of oBtnVerEquipos to True
 
         If (NavigateData.bReadOnly) Begin
             WebSet pbRender of oEditBtn to True
