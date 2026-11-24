@@ -8,6 +8,7 @@ Use cWebMenuGroup.pkg
 Use cWebMenuItem.pkg
 Use cWebForm.pkg
 Use cWebButton.pkg
+Use cWebColumn.pkg
 
 Use cligaDataDictionary.dd
 Use cEquipoDataDictionary.dd
@@ -25,7 +26,13 @@ Object oZoomLiga is a cWebView
     End_Object 
 
     Set Main_DD To oliga_DD
-    Set Server  To oliga_DD
+    Set Server  to oliga_DD
+    
+    //Añadimos el DD de equipos para el cWebColumn
+    Object oEquipo_DD is a cEquipoDataDictionary
+        Set DDO_Server to oliga_DD
+        Set Constrain_File to Liga.File_Number
+    End_Object
 
 
     Object oWebMainPanel is a cWebPanel
@@ -57,6 +64,19 @@ Object oZoomLiga is a cWebView
             Set peAlign to alignLeft
            
         End_Object
+        
+        //Creamos la lista para ver los equipos directamente en el Zoom
+        Object oEquiposList is a cWebList
+            Set piColumnSpan to 12
+            Set psCaption to "Equipos de esta liga"
+            Set Server to oEquipo_DD
+
+              Object oEquipoNombre is a cWebColumn
+                Entry_Item Equipo.Nombre
+                Set psCaption to "Nombre"
+                Set piWidth to 200
+              End_Object
+       End_Object
         
                //Creamos el botón para ver equipos
             Object oBtnVerEquipos is a cWebButton
